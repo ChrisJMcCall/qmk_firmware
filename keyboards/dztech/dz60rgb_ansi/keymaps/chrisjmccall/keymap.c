@@ -59,37 +59,6 @@ void matrix_init_user(void) {
 }
 
 void set_leds_color( int layer) {
-  // print("start\n");
-  // xprintf("%u\n", KC_GESC);
-  // int ledIndexOffset = 0;
-  // for (int k = 0; k < MATRIX_ROWS; k++) {
-    // for (int l = 0; l < MATRIX_COLS; l++) {
-      // uint16_t keycode = pgm_read_byte(&keymaps[layer][k][l]);
-      // if (keycode == (uint16_t)0) {
-        // xprintf("%u\n", ledIndexOffset);
-        // ledIndexOffset++;
-      // }
-      // if (keycode > (uint16_t)1) {
-        // int ledIndex = ((k*14)+l) - ledIndexOffset;
-        // rgb_matrix_set_color(ledIndex, 255,255,255);
-// 
-      // }
-    // }
-    // print(KC_GESC);
-    // if(keymaps[layer][i][0] == _______) {
-      // print("yes");
-    // } else {
-      // print("no");
-    // }
-  // }
-  // print("end\n");
-
-  // for (int i = 0; i < MATRIX_ROWS; i++) {
-    // if(keymaps[layer][i][0] == ){
-      // print(yes);
-    // }
-  // }
-
   for (int i = 0; i < DRIVER_LED_TOTAL; i++) {
     uint8_t val = pgm_read_byte(&ledcolors[layer][i][2]);
     // if the brightness of the led is set to 0 in the map,
